@@ -1,33 +1,47 @@
 import { useState } from "react";
 const Stasistics = ({ good, neutral, bad, all, average, positive }) => {
   return (
-    <div>
-      <p>
-        {"good: "}
-        {good}
-      </p>
-      <p>
-        {"neutral: "}
-        {neutral}
-      </p>
-      <p>
-        {"bad: "}
-        {bad}
-      </p>
-      <p>
-        {"all: "}
-        {all}
-      </p>
-      <p>
-        {"avarage: "}
-        {average}
-      </p>
-      <p>
-        {"positive: "}
-        {positive}
-        {"%"}
-      </p>
-    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            {"good: "}
+            {good}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {"neutral: "}
+            {neutral}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {"bad: "}
+            {bad}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {"all: "}
+            {all}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {"avarage: "}
+            {average}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {"positive: "}
+            {positive}
+            {"%"}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 };
 
