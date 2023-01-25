@@ -1,18 +1,38 @@
 import { useState } from "react";
 
 const App = () => {
-  const [value, setValue] = useState(23);
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
-  const handleClick = (param) => () => {
-    setValue(param);
+  const handleClick = () => {
+    setGood(good + 1);
+  };
+  const handleClick1 = () => {
+    setNeutral(neutral + 1);
+  };
+  const handleClick2 = () => {
+    setBad(bad + 1);
   };
   return (
     <div>
-      {value}
-      <button onClick={handleClick(0)}>makeZero</button>
-      <button onClick={handleClick(3)}>makeThree</button>
-      <button onClick={handleClick(5)}>makeFive</button>
-      <button onClick={handleClick(23)}>make23</button>
+      <h1>Give Feedback</h1>
+      <button onClick={handleClick}>good</button>
+      <button onClick={handleClick1}>neutral</button>
+      <button onClick={handleClick2}>bad</button>
+      <h2>stasistics</h2>
+      <p>
+        {"good: "}
+        {good}
+      </p>
+      <p>
+        {"neutral: "}
+        {neutral}
+      </p>
+      <p>
+        {"bad: "}
+        {bad}
+      </p>
     </div>
   );
 };
