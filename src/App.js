@@ -1,50 +1,5 @@
 import { useState } from "react";
 import RendomAnecdot from "./components/Header";
-const Stasistics = ({ good, neutral, bad, all, average, positive }) => {
-  return (
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            {"good: "}
-            {good}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            {"neutral: "}
-            {neutral}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            {"bad: "}
-            {bad}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            {"all: "}
-            {all}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            {"avarage: "}
-            {average}
-          </td>
-        </tr>
-        <tr>
-          <td>
-            {"positive: "}
-            {positive}
-            {"%"}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  );
-};
 
 const App = () => {
   const anecdotes = [
