@@ -1,4 +1,5 @@
 import { useState } from "react";
+import RendomAnecdot from "./components/Header";
 const Stasistics = ({ good, neutral, bad, all, average, positive }) => {
   return (
     <table>
@@ -57,17 +58,9 @@ const App = () => {
     "The only way to go fast, is to go well.",
   ];
 
-  const [selected, setSelected] = useState(0);
-  const handleClick = () => {
-    setSelected(() => {
-      return anecdotes[Math.floor(Math.random() * anecdotes.length)];
-    });
-  };
-
   return (
     <div>
-      {selected}
-      <button onClick={handleClick}>randomAnecdot</button>
+      <RendomAnecdot anecdotes={anecdotes} />
     </div>
   );
 };
