@@ -6,8 +6,6 @@ const RendomAnecdot = ({anecdotes}) => {
       anecdotes[Math.floor(Math.random() * anecdotes.length)]
     );
 
-  
-    const [topVote, setTopVote]= useState(null)
     const [votes, setVotes] = useState(() => {
       let initItem = {};
       anecdotes.forEach((item) => (initItem[item] = 0));
@@ -25,8 +23,7 @@ const RendomAnecdot = ({anecdotes}) => {
       });
     };
     const entries = Object.entries(votes);
-    const [highestValueItemName, highestValue] = entries.sort((b,a) => a[1]-b[1])[0];
-    // console.log(highestValueItemName, highestValue);
+    const [highestValueItemName, highestValue] = entries.sort((a,b) => b[1]-a[1])[0];
   
     const handleChange = () => {
       const newItem = anecdotes[Math.floor(Math.random() * anecdotes.length)];
